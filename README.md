@@ -1,8 +1,12 @@
+**This is a fork of Escope with modifications needed by [atom-refs].**
+
 Escope ([escope](http://github.com/estools/escope)) is
 [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
 scope analyzer extracted from [esmangle project](http://github.com/estools/esmangle).
 
 [![Build Status](https://travis-ci.org/estools/escope.png?branch=master)](https://travis-ci.org/estools/escope)
+
+[atom-refs]: https://github.com/rixo/atom-refs-escope
 
 ### Example
 
@@ -19,7 +23,7 @@ var currentScope = scopeManager.acquire(ast);   // global scope
 estraverse.traverse(ast, {
     enter: function(node, parent) {
         // do stuff
-        
+
         if (/Function/.test(node.type)) {
             currentScope = scopeManager.acquire(node);  // get current function scope
         }
@@ -28,7 +32,7 @@ estraverse.traverse(ast, {
         if (/Function/.test(node.type)) {
             currentScope = currentScope.upper;  // set to parent scope
         }
-        
+
         // do stuff
     }
 });
