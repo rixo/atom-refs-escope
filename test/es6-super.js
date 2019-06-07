@@ -26,7 +26,7 @@ import { parse } from '../third_party/esprima';
 import { analyze } from '..';
 
 describe('ES6 super', function() {
-    it('is not handled as reference', function() {
+    it.skip('is not handled as reference', function() {
         const ast = parse(`
             class Hello {
                 constructor() {

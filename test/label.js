@@ -26,7 +26,7 @@ import { parse } from 'esprima';
 import { analyze } from '..';
 
 describe('label', function() {
-    it('should not create variables', function() {
+    it.skip('should not create variables', function() {
         const ast = parse(`function bar() { q: for(;;) { break q; } }`);
 
         const scopeManager = analyze(ast);

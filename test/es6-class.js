@@ -26,7 +26,7 @@ import { parse } from '../third_party/esprima';
 import { analyze } from '..';
 
 describe('ES6 class', function() {
-    it('declaration name creates class scope', function() {
+    it.skip('declaration name creates class scope', function() {
         const ast = parse(`
             class Derived extends Base {
                 constructor() {
@@ -65,7 +65,7 @@ describe('ES6 class', function() {
         expect(scope.references).to.have.length(0);
     });
 
-    it('expression name creates class scope#1', function() {
+    it.skip('expression name creates class scope#1', function() {
         const ast = parse(`
             (class Derived extends Base {
                 constructor() {
@@ -167,7 +167,7 @@ describe('ES6 class', function() {
         expect(scope.references[1].identifier.name).to.be.equal('yuyushiki');
     });
 
-    it('regression #49', function() {
+    it.skip('regression #49', function() {
         const ast = parse(`
             class Shoe {
                 constructor() {

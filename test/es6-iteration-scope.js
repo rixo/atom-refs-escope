@@ -26,7 +26,7 @@ import { parse } from '../third_party/esprima';
 import { analyze } from '..';
 
 describe('ES6 iteration scope', function() {
-    it('let materialize iteration scope for ForInStatement#1', function() {
+    it.skip('let materialize iteration scope for ForInStatement#1', function() {
         const ast = parse(`
             (function () {
                 let i = 20;
@@ -79,7 +79,7 @@ describe('ES6 iteration scope', function() {
         expect(scope.references[1].resolved).to.be.equal(iterScope.variables[0]);
     });
 
-    it('let materialize iteration scope for ForInStatement#2', function() {
+    it.skip('let materialize iteration scope for ForInStatement#2', function() {
         const ast = parse(`
             (function () {
                 let i = 20;

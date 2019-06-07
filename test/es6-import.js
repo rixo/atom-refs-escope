@@ -25,7 +25,7 @@ import { expect } from 'chai';
 import espree from '../third_party/espree';
 import { analyze } from '..';
 
-describe('import declaration', function() {
+describe.skip('import declaration', function() {
     // http://people.mozilla.org/~jorendorff/es6-draft.html#sec-static-and-runtme-semantics-module-records
     it('should import names from source', function() {
         const ast = espree(`import v from "mod";`, {sourceType: 'module'});

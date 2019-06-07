@@ -27,7 +27,7 @@ import { analyze } from '..';
 
 describe('export declaration', function() {
     // http://people.mozilla.org/~jorendorff/es6-draft.html#sec-static-and-runtme-semantics-module-records
-    it('should create vairable bindings', function() {
+    it.skip('should create variable bindings', function() {
         const ast = espree(`export var v;`, {sourceType: 'module'});
 
         const scopeManager = analyze(ast, {ecmaVersion: 6, sourceType: 'module'});
@@ -45,7 +45,7 @@ describe('export declaration', function() {
         expect(scope.references).to.have.length(0);
     });
 
-    it('should create function declaration bindings', function() {
+    it.skip('should create function declaration bindings', function() {
         const ast = espree(`export default function f(){};`, {sourceType: 'module'});
 
         const scopeManager = analyze(ast, {ecmaVersion: 6, sourceType: 'module'});

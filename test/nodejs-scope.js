@@ -63,21 +63,21 @@ describe('nodejsScope option', function() {
         expect(scope.type).to.be.equal('global');
         expect(scope.block.type).to.be.equal('Program');
         expect(scope.isStrict).to.be.false;
-        expect(scope.variables).to.have.length(0);
+        expect(scope.variables, 'scope[0].variables.length').to.have.length(0);
 
         scope = scopeManager.scopes[1];
         expect(scope.type).to.be.equal('function');
         expect(scope.block.type).to.be.equal('Program');
         expect(scope.isStrict).to.be.false;
-        expect(scope.variables).to.have.length(1);
+        expect(scope.variables, 'scope[1].variables.length').to.have.length(1);
         expect(scope.variables[0].name).to.be.equal('arguments');
 
         scope = scopeManager.scopes[2];
         expect(scope.type).to.be.equal('module');
-        expect(scope.variables).to.have.length(1);
+        expect(scope.variables, 'scope[2].variables.length').to.have.length(1);
         expect(scope.variables[0].name).to.be.equal('v');
         expect(scope.variables[0].defs[0].type).to.be.equal('ImportBinding');
-        expect(scope.references).to.have.length(0);
+        expect(scope.references, 'scope[0].references.length').to.have.length(1);
     });
 });
 

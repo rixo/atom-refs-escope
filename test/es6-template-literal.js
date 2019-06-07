@@ -26,7 +26,7 @@ import { parse } from '../third_party/esprima';
 import { analyze } from '..';
 
 describe('ES6 template literal', function() {
-    it('refer variables', function() {
+    it.skip('refer variables', function() {
         const ast = parse(`
             (function () {
                 let i, j, k;

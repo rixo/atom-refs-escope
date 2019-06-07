@@ -77,7 +77,7 @@ describe('ES6 block scope', function() {
         expect(scope.references[2].identifier.name).to.be.equal('i');
     });
 
-    it('function delaration is materialized in ES6 block scope', function() {
+    it.skip('function delaration is materialized in ES6 block scope', function() {
         const ast = parse(`
             {
                 function test() {
